@@ -47,9 +47,9 @@
                         <strong>Prendre un RDV en ligne</strong>
                     </h2>
                     <hr>
-                    <p>
-                        <iframe src="http://www.supersaas.fr/schedule/reservationCelineVallet/Consultation" width="1100" height="1000"> </iframe>
-                    </p>
+                    <div id="calendrier">
+                       
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,6 +73,14 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/onLoad.js"></script>
+
+<script>
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+        $("#calendrier").append("<p>La reservation directement sur ce site en ligne n'est pas disponible sur mobile ou tablette. <br> Pour réserver, cliquez <a href='http://www.supersaas.fr/schedule/reservationCelineVallet/Consultation'>ici</a></p>");
+    }else{
+        $("#calendrier").append("<iframe src='http://www.supersaas.fr/schedule/reservationCelineVallet/Consultation' width='1100' height='1000'> </iframe>");
+    }
+</script>
 
 </body>
 
